@@ -1,1 +1,1 @@
-# android-weight_tracker
+# Bodyweight tracking app for android written in Java
