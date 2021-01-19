@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Bodyweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bodyweight"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <ImageView
+        android:id="@+id/graph"
+        android:layout_width="377dp"
+        android:layout_height="202dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bodyweight"
+        app:layout_constraintVertical_bias="0.035"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ToggleButton
+        android:id="@+id/dailyChangeButton"
+        android:layout_width="188dp"
+        android:layout_height="41dp"
+        android:checked="true"
+        android:text="Daily Δ"
+        android:textOff="Daily Δ"
+        android:textOn="Daily Δ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/graph"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ToggleButton
+        android:id="@+id/weeklyChangeButton"
+        android:layout_width="188dp"
+        android:layout_height="41dp"
+        android:text="Weekly Δ"
+        android:textOff="Weekly Δ"
+        android:textOn="Weekly Δ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/graph"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/dailyChangeButton"
+        app:layout_constraintTop_toBottomOf="@+id/graph"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyChangeButton"
+        app:layout_constraintVertical_bias="0.033">
+
+        <TableRow
+            android:id="@+id/tableRowTotalChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/totalChange"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Total Δ" />
+
+            <TextView
+                android:id="@+id/blankWeight"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/weightChangeTotal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/blankFat"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/fatChangeTotal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/blankMuscle"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/muscleChangeTotal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/blankLBM"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/LBMChangeTotal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+            <TextView
+                android:id="@+id/blankMM"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/MMChangeTotal"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRowHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dateHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Date" />
+
+            <TextView
+                android:id="@+id/weightHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Weight" />
+
+            <TextView
+                android:id="@+id/weightChangeHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Δ" />
+
+            <TextView
+                android:id="@+id/fatHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Fat" />
+
+            <TextView
+                android:id="@+id/fatChangeHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Δ" />
+
+            <TextView
+                android:id="@+id/muscleHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Muscle" />
+
+            <TextView
+                android:id="@+id/muscleChangeHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Δ" />
+
+            <TextView
+                android:id="@+id/LBMHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="LBM" />
+
+            <TextView
+                android:id="@+id/LBMChangeHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Δ" />
+
+            <TextView
+                android:id="@+id/MMHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="MM" />
+
+            <TextView
+                android:id="@+id/MMChangeHeader"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Δ" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/importButton"
+        android:layout_width="188dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginRight="204dp"
+        android:text="Import"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <Button
+        android:id="@+id/exportButton"
+        android:layout_width="188dp"
+        android:layout_height="41dp"
+        android:onClick="exportFile"
+        android:text="Export"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@+id/importButton" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/exportButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
